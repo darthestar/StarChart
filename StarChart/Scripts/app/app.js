@@ -6,7 +6,15 @@ app.config(function ($routeProvider) {
         templateUrl: '/scripts/app/pages/dashboard.html',
         controller: 'homeController'
     });
+});
+
+app.config(function ($routeProvider){
+    $routeProvider.when("/home/:productID", {
+        templateUrl: '/scripts/app/pages/products.html',
+        controller: 'productViewController'
+    });
 
     $routeProvider.otherwise({ redirectTo: "/home" });
 });
+
 
